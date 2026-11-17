@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speed Brain</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+
+    <header>
+      <div class="brand">
+        <div class="logo">SB</div>
+
+        <div>
+          <h1>Speed Brain</h1>
+        </div>
+      </div>
+
+      <div class="status" id="status">OFF</div>
+    </header>
+
+    <section class="toggle-card">
+      <div>
+        <h2>Smart Speed</h2>
+      </div>
+
+      <label class="switch">
+        <input type="checkbox" id="enabled">
+        <span class="slider"></span>
+      </label>
+    </section>
+
+    <button class="capture-button" id="captureAudio">Connect</button>
+
+    <section class="settings">
+
+      <div class="setting">
+        <div class="setting-heading">
+          <label for="speechSpeed">Speech</label>
+          <strong id="speechValue">1.25x</strong>
+        </div>
+
+        <input type="range" id="speechSpeed"
+          min="1" max="2" step="0.05">
+
+      </div>
+
+      <div class="setting">
+        <div class="setting-heading">
+          <label for="silenceSpeed">Silent</label>
+          <strong id="silenceValue">2.00x</strong>
+        </div>
+
+        <input type="range" id="silenceSpeed"
+          min="1" max="3" step="0.1">
+
+      </div>
+
+      <div class="setting">
+        <div class="setting-heading">
+          <label for="threshold">Limit</label>
+          <strong id="thresholdValue">-55 dB</strong>
+        </div>
+
+        <input type="range" id="threshold"
+          min="-70" max="-30" step="1">
+
+      </div>
+
+      <div class="setting">
+        <div class="setting-heading">
+          <label for="silenceDelay">Delay</label>
+          <strong id="delayValue">700 ms</strong>
+        </div>
+
+        <input type="range" id="silenceDelay"
+          min="100" max="2000" step="50">
+
+      </div>
+
+      <div class="setting">
+        <div class="setting-heading">
+          <label for="rampDuration">Smootheness</label>
+          <strong id="rampValue">600 ms</strong>
+        </div>
+
+        <input type="range" id="rampDuration"
+          min="0" max="2000" step="50">
+
+      </div>
+
+    </section>
+
+    <footer>
+      <details class="diagnostics" id="diagnostics">
+        <summary>Debug</summary>
+        <label for="debugLog"></label><textarea id="debugLog" readonly></textarea>
+        <button id="copyLog">Copy</button>
+        <button id="clearLog">Clear</button>
+      </details>
+      <button id="reset">Reset</button>
+    </footer>
+
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

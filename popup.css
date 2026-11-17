@@ -1,0 +1,204 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 310px;
+  background: #101014;
+  color: #f5f5f7;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.app {
+  padding: 16px;
+}
+
+header,
+.brand,
+.setting-heading,
+.toggle-card,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  justify-content: flex-start;
+  gap: 11px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #4f46e5);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+
+header p,
+.setting p,
+.toggle-card p {
+  color: #85858f;
+  font-size: 11px;
+  margin: 0;
+}
+
+.status {
+  font-size: 10px;
+  color: #a78bfa;
+  background: #28203d;
+  border-radius: 20px;
+  padding: 6px 9px;
+  font-weight: 700;
+}
+
+.toggle-card {
+  margin-top: 23px;
+  padding: 15px;
+  background: #1b1b22;
+  border-radius: 14px;
+}
+
+.toggle-card h2 {
+  margin: 0 0 5px;
+  font-size: 13px;
+}
+
+.switch {
+  position: relative;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: #44444e;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.switch input:checked + .slider {
+  background: #8b5cf6;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(18px);
+}
+
+.settings {
+  margin-top: 23px;
+}
+
+.capture-button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: #28203d;
+  color: #d8ccff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.setting {
+  margin-bottom: 15px;
+}
+
+.setting-heading {
+  margin-bottom: 6px;
+}
+
+.setting-heading label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.setting-heading strong {
+  color: #a78bfa;
+  font-size: 12px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #8b5cf6;
+  cursor: pointer;
+}
+
+.setting p {
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.diagnostics {
+  position: relative;
+}
+
+.diagnostics summary {
+  cursor: pointer;
+  color: #777781;
+}
+
+.diagnostics textarea {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 276px;
+  height: 150px;
+  resize: vertical;
+  border: 1px solid #30303a;
+  border-radius: 8px;
+  padding: 8px;
+  background: #101014;
+  color: #d8d8df;
+  font: 10px/1.4 Consolas, monospace;
+}
+
+footer {
+  padding-top: 15px;
+  border-top: 1px solid #30303a;
+  color: #777781;
+  font-size: 10px;
+}
+
+button {
+  border: none;
+  background: transparent;
+  color: #a78bfa;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+button:hover {
+  color: white;
+}
